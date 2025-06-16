@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Carolina - Designer Gráfica</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Custom styles to match the PDF's aesthetic */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #FDF8F0; /* Soft beige background */
+            color: #4A3F35; /* Dark brown text color */
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-section {
+            background-color: #EADBC8; /* Slightly darker beige for hero */
+        }
+        .accent-color {
+            color: #C68B59; /* Muted gold/brown accent */
+        }
+        .section-title {
+            border-bottom: 2px solid #C68B59;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .portfolio-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-[#EADBC8]/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold font-montserrat text-[#4A3F35]">
+                <a href="#hero">MC.</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#formacao" class="hover:text-[#C68B59] transition-colors">Formação</a>
+                <a href="#experiencia" class="hover:text-[#C68B59] transition-colors">Experiência</a>
+                <a href="#portfolio" class="hover:text-[#C68B59] transition-colors">Portfólio</a>
+                <a href="#contato" class="hover:text-[#C68B59] transition-colors">Contato</a>
+            </div>
+             <div class="md:hidden">
+                <button id="menu-btn" class="text-[#4A3F35] focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#formacao" class="block text-center py-2 px-4 text-sm hover:bg-[#DACAB8]">Formação</a>
+            <a href="#experiencia" class="block text-center py-2 px-4 text-sm hover:bg-[#DACAB8]">Experiência</a>
+            <a href="#portfolio" class="block text-center py-2 px-4 text-sm hover:bg-[#DACAB8]">Portfólio</a>
+            <a href="#contato" class="block text-center py-2 px-4 text-sm hover:bg-[#DACAB8]">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section min-h-[60vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-white" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.2);">Maria Carolina</h1>
+                <h2 class="text-2xl md:text-3xl font-bold mt-4 accent-color">Designer Gráfica</h2>
+                <p class="mt-2 text-lg">Portfólio</p>
+            </div>
+        </section>
+
+        <!-- Formação Section -->
+        <section id="formacao" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold section-title">Minha Formação</h2>
+                <div class="mt-12 max-w-3xl mx-auto bg-white/50 p-8 rounded-xl shadow-lg">
+                    <p class="text-lg leading-relaxed mb-6">
+                        Trabalho como designer gráfica profissional há aproximadamente seis anos.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Atualmente curso Superior de Tecnologia em Marketing pela Unicessumar, e sou certificada pela <strong>Zion Escola de Entretenimento</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiência Section -->
+        <section id="experiencia" class="py-20 bg-white/40">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center section-title">Experiência</h2>
+                <div class="mt-12 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Job 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold accent-color">BAZAR FALCONI E SAN'ANA MIL ART LTDA</h3>
+                        <p class="mt-4 text-gray-600">Feitura de carimbos personalizados, artes para sublimação em camisetas e canecas, sublimação e atendimento ao cliente.</p>
+                    </div>
+                    <!-- Job 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold accent-color">ALPHA CURSO PRE-MILITAR LTDA</h3>
+                        <p class="mt-4 text-gray-600">Estágio como Social Mídia, design de avisos publicitários físicos e edição de vídeos promocionais.</p>
+                    </div>
+                    <!-- Job 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold accent-color">PASSE VIP - SISTEMA DE IDENTIFICAÇÃO LTDA</h3>
+                        <p class="mt-4 text-gray-600">Trabalho como designer gráfico, na produção de artes para pulseiras, credenciais, crachás e cordões. Artes para redes sociais e comerciais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center section-title">Alguns Trabalhos</h2>
+                <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Portfolio Item 1 -->
+                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/400x600/F3D479/333333?text=Setembro%0AAmarelo" alt="Arte da campanha Setembro Amarelo" class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/400x600/E8B4C8/C13584?text=Outubro%0ARosa" alt="Arte da campanha Outubro Rosa" class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Portfolio Item 3 -->
+                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/400x600/1E3A8A/FFFFFF?text=Novembro%0AAzul" alt="Arte da campanha Novembro Azul" class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Portfolio Item 4 -->
+                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/400x600/222222/FF0000?text=Dia+Mundial%0Ado+Rock" alt="Arte para o Dia Mundial do Rock" class="w-full h-auto object-cover">
+                    </div>
+                     <!-- Portfolio Item 5 -->
+                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/400x600/F0A500/FFFFFF?text=Dia+das+Mães" alt="Arte para o Dia das Mães" class="w-full h-auto object-cover">
+                    </div>
+                     <!-- Portfolio Item 6 -->
+                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/400x600/ffffff/000000?text=Bienal%0Ado+Livro" alt="Arte para a Bienal do Livro" class="w-full h-auto object-cover">
+                    </div>
+                     <!-- Portfolio Item 7 -->
+                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/400x600/FFFFFF/E40303?text=Orgulho" alt="Arte da campanha de Orgulho" class="w-full h-auto object-cover">
+                    </div>
+                     <!-- Portfolio Item 8 -->
+                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/400x600/1a1a1a/ffffff?text=Lollapalooza" alt="Arte para o Lollapalooza" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="py-20 bg-white/40">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold section-title">Contato</h2>
+                <div class="mt-12 max-w-md mx-auto">
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col space-y-6">
+                        <a href="tel:21972865819" class="flex items-center justify-center space-x-4 text-lg hover:text-[#C68B59] transition-colors">
+                            <i class="fas fa-phone fa-fw"></i>
+                            <span>(21) 97286-5819</span>
+                        </a>
+                        <a href="mailto:catcabine@gmail.com" class="flex items-center justify-center space-x-4 text-lg hover:text-[#C68B59] transition-colors">
+                            <i class="fas fa-envelope fa-fw"></i>
+                            <span>catcabine@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#EADBC8] py-6">
+        <div class="container mx-auto px-6 text-center text-sm text-[#4A3F35]">
+            <p>&copy; 2024 Maria Carolina. Todos os direitos reservados.</p>
+            <p class="mt-1">Desenvolvido com <i class="fas fa-heart text-red-500"></i></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>

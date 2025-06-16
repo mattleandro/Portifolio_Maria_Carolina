@@ -1,0 +1,33 @@
+/* Custom styles to match the PDF's aesthetic */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FDF8F0; /* Soft beige background */
+    color: #4A3F35; /* Dark brown text color */
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-section {
+    background-color: #EADBC8; /* Slightly darker beige for hero */
+}
+
+.accent-color {
+    color: #C68B59; /* Muted gold/brown accent */
+}
+
+.section-title {
+    border-bottom: 2px solid #C68B59;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.portfolio-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
