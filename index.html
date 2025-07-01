@@ -1,214 +1,197 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Carolina - Designer Gráfica</title>
+    <title>Maria Carolina - Designer Gráfico</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Heroicons -->
+    <script src="https://unpkg.com/heroicons@2.1.1/24/outline/index.js"></script>
 
-    <style>
-        /* Custom styles to match the PDF's aesthetic */
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: #FDF8F0; /* Soft beige background */
-            color: #4A3F35; /* Dark brown text color */
-        }
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .hero-section {
-            background-color: #EADBC8; /* Slightly darker beige for hero */
-        }
-        .accent-color {
-            color: #C68B59; /* Muted gold/brown accent */
-        }
-        .section-title {
-            border-bottom: 2px solid #C68B59;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-        .portfolio-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .portfolio-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-    </style>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+
 </head>
-<body class="antialiased">
+<body class="gradient-bg">
 
-    <!-- Header & Navigation -->
-    <header class="bg-[#EADBC8]/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold font-montserrat text-[#4A3F35]">
-                <a href="#hero">MC.</a>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#formacao" class="hover:text-[#C68B59] transition-colors">Formação</a>
-                <a href="#experiencia" class="hover:text-[#C68B59] transition-colors">Experiência</a>
-                <a href="#portfolio" class="hover:text-[#C68B59] transition-colors">Portfólio</a>
-                <a href="#contato" class="hover:text-[#C68B59] transition-colors">Contato</a>
-            </div>
-             <div class="md:hidden">
-                <button id="menu-btn" class="text-[#4A3F35] focus:outline-none">
-                    <i class="fas fa-bars fa-lg"></i>
-                </button>
-            </div>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#formacao" class="block text-center py-2 px-4 text-sm hover:bg-[#DACAB8]">Formação</a>
-            <a href="#experiencia" class="block text-center py-2 px-4 text-sm hover:bg-[#DACAB8]">Experiência</a>
-            <a href="#portfolio" class="block text-center py-2 px-4 text-sm hover:bg-[#DACAB8]">Portfólio</a>
-            <a href="#contato" class="block text-center py-2 px-4 text-sm hover:bg-[#DACAB8]">Contato</a>
+    <!-- Cabeçalho e Navegação -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">Maria Carolina</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#sobre" class="text-gray-300 hover:text-white transition-colors">Sobre</a>
+                <a href="#trabalhos" class="text-gray-300 hover:text-white transition-colors">Trabalhos</a>
+                <a href="#contato" class="text-gray-300 hover:text-white transition-colors">Contato</a>
+            </nav>
+            <a href="#contato" class="hidden md:block bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">Vamos conversar</a>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section min-h-[60vh] flex items-center">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-white" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.2);">Maria Carolina</h1>
-                <h2 class="text-2xl md:text-3xl font-bold mt-4 accent-color">Designer Gráfica</h2>
-                <p class="mt-2 text-lg">Portfólio</p>
+    <main class="pt-24">
+
+        <!-- Seção Hero -->
+        <section class="text-center py-20 md:py-32 px-6 fade-in">
+            <div class="container mx-auto">
+                <h1 class="text-4xl md:text-7xl font-extrabold text-white leading-tight mb-4">
+                    Design Gráfico que <br class="hidden md:block">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">conecta e inspira</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                    Transformando ideias em artes e comunicação visual que contam histórias e geram resultados.
+                </p>
+                <a href="#trabalhos" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:opacity-90 transition-opacity">
+                    Conheça meus trabalhos
+                </a>
             </div>
         </section>
 
-        <!-- Formação Section -->
-        <section id="formacao" class="py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold section-title">Minha Formação</h2>
-                <div class="mt-12 max-w-3xl mx-auto bg-white/50 p-8 rounded-xl shadow-lg">
-                    <p class="text-lg leading-relaxed mb-6">
-                        Trabalho como designer gráfica profissional há aproximadamente seis anos.
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="py-20 px-6">
+            <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Olá, sou a Maria Carolina.</h2>
+                    <p class="text-gray-400 mb-6">
+                        Trabalho como designer gráfica profissional há aproximadamente seis anos, com paixão por criar soluções visuais criativas e eficazes. Atualmente, estou expandindo meus conhecimentos cursando Tecnologia em Marketing pela Unicessumar e sou certificada em design pela Zion Escola de Entretenimento.
                     </p>
-                    <p class="text-lg leading-relaxed">
-                        Atualmente curso Superior de Tecnologia em Marketing pela Unicessumar, e sou certificada pela <strong>Zion Escola de Entretenimento</strong>.
-                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <span class="text-white">6 anos de experiência no mercado</span>
+                        </div>
+                        <div class="flex items-center">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-5.747h18" /></svg>
+                            <span class="text-white">Foco em Social Media, Branding e Mídias Promocionais</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 fade-in" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-white mb-4">Experiência Principal</h3>
+                    <ul class="space-y-4">
+                        <li class="bg-gray-800/60 p-4 rounded-lg">
+                            <h4 class="font-semibold text-white">PASSE VIP - SISTEMA DE IDENTIFICAÇÃO LTDA</h4>
+                            <p class="text-gray-400 text-sm">Criação para pulseiras, credenciais, crachás e mídias sociais.</p>
+                        </li>
+                        <li class="bg-gray-800/60 p-4 rounded-lg">
+                            <h4 class="font-semibold text-white">ALPHA CURSO PRE-MILITAR LTDA</h4>
+                            <p class="text-gray-400 text-sm">Estágio em Social Media e edição de vídeos.</p>
+                        </li>
+                         <li class="bg-gray-800/60 p-4 rounded-lg">
+                            <h4 class="font-semibold text-white">BAZAR FALCONI E SAN'ANA MIL ART LTDA</h4>
+                            <p class="text-gray-400 text-sm">Artes para carimbos e sublimação.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Experiência Section -->
-        <section id="experiencia" class="py-20 bg-white/40">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center section-title">Experiência</h2>
-                <div class="mt-12 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Job 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <h3 class="text-xl font-bold accent-color">BAZAR FALCONI E SAN'ANA MIL ART LTDA</h3>
-                        <p class="mt-4 text-gray-600">Feitura de carimbos personalizados, artes para sublimação em camisetas e canecas, sublimação e atendimento ao cliente.</p>
+        <!-- Seção de Trabalhos -->
+        <section id="trabalhos" class="py-20 px-6">
+            <div class="container mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white">Meu Portfólio</h2>
+                    <p class="text-lg text-gray-400 mt-2">Uma seleção de projetos que desenvolvi.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Setembro Amarelo -->
+                    <div class="portfolio-card bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden fade-in">
+                        <a href='https://postimg.cc/5Xhyv0Yt' target='_blank'><img src='https://i.postimg.cc/TPwDz5Tn/setembro-amarelo.jpg' border='0' alt='setembro-amarelo'/></a><br /><a href='https://postimages.org/'>free online image storage</a><br />
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Setembro Amarelo</h3>
+                            <p class="text-gray-400 mt-2">Campanha de conscientização sobre a prevenção ao suicídio.</p>
+                        </div>
                     </div>
-                    <!-- Job 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <h3 class="text-xl font-bold accent-color">ALPHA CURSO PRE-MILITAR LTDA</h3>
-                        <p class="mt-4 text-gray-600">Estágio como Social Mídia, design de avisos publicitários físicos e edição de vídeos promocionais.</p>
+
+                    <!-- Card 2: Dia das Mães -->
+                    <div class="portfolio-card bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.1s;">
+                        <a href='https://postimg.cc/QVQt7hh8' target='_blank'><img src='https://i.postimg.cc/rybtvwHr/dia-das-maes.png' border='0' alt='dia-das-maes'/></a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Dia das Mães</h3>
+                            <p class="text-gray-400 mt-2">Homenagem especial para o Dia das Mães, com tema floral.</p>
+                        </div>
                     </div>
-                    <!-- Job 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <h3 class="text-xl font-bold accent-color">PASSE VIP - SISTEMA DE IDENTIFICAÇÃO LTDA</h3>
-                        <p class="mt-4 text-gray-600">Trabalho como designer gráfico, na produção de artes para pulseiras, credenciais, crachás e cordões. Artes para redes sociais e comerciais.</p>
+
+                    <!-- Card 3: Outubro Rosa -->
+                    <div class="portfolio-card bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.2s;">
+                      <!--   <img src="imagens/trabalhos/outubro_rosa.jpg" alt="Arte para Outubro Rosa" class="w-full h-64 object-cover"> -->
+                         <a href='https://postimg.cc/v4kgzhjb' target='_blank'><img src='https://i.postimg.cc/PqrWdFQp/outubro-rosa.jpg' border='0' alt='outubro-rosa'/></a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Outubro Rosa</h3>
+                            <p class="text-gray-400 mt-2">Peça para a campanha de conscientização sobre o câncer de mama.</p>
+                        </div>
                     </div>
+                    
+                    <!-- Card 4: Novembro Azul -->
+                    <div class="portfolio-card bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.3s;">
+                        <a href='https://postimg.cc/ctLLZtjF' target='_blank'><img src='https://i.postimg.cc/5ywYBwmW/novembro-azul.jpg' border='0' alt='novembro-azul'/></a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Novembro Azul</h3>
+                            <p class="text-gray-400 mt-2">Design para a campanha de prevenção ao câncer de próstata.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Dia do Autismo -->
+                    <div class="portfolio-card bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.4s;">
+                        <a href='https://postimg.cc/ThtP0QLF' target='_blank'><img src='https://i.postimg.cc/vHs6QNQY/autismo.png' border='0' alt='autismo'/></a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Dia Mundial do Autismo</h3>
+                            <p class="text-gray-400 mt-2">Arte sobre a importância da conscientização do autismo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Dia do Orgulho -->
+                    <div class="portfolio-card bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.5s;">
+                        <a href='https://postimg.cc/1nJyW5tw' target='_blank'><img src='https://i.postimg.cc/j2rCSDYg/orgulho-junho.jpg' border='0' alt='orgulho-junho'/></a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Dia do Orgulho</h3>
+                            <p class="text-gray-400 mt-2">Criação para cordões personalizados celebrando o orgulho.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de Contato -->
+        <section id="contato" class="py-20 px-6 bg-gray-900/50 border-t border-gray-800">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white">Vamos criar algo incrível juntos?</h2>
+                <p class="text-lg text-gray-400 mt-4 mb-8 max-w-2xl mx-auto">Estou sempre aberta a novos projetos e colaborações. Entre em contato e vamos transformar suas ideias em realidade.</p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <div class="flex items-center text-lg text-white bg-gray-800/60 px-6 py-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        <a href="mailto:catcabine@gmail.com" class="hover:underline">catcabine@gmail.com</a>
+                    </div>
+                    <!-- Botão do WhatsApp -->
+                    <a href="https://wa.me/5521972865819" target="_blank" rel="noopener noreferrer" class="flex items-center text-lg text-white bg-gray-800/60 hover:bg-gray-700/60 transition-colors px-6 py-3 rounded-lg">
+                        <img src="imagens/wppicon.png" class="h-6 w-6 mr-3" 
+                        
+                        
+                        
+                        alt="">
+                        <span>Chamar no WhatsApp</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center section-title">Alguns Trabalhos</h2>
-                <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <!-- Portfolio Item 1 -->
-                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/400x600/F3D479/333333?text=Setembro%0AAmarelo" alt="Arte da campanha Setembro Amarelo" class="w-full h-auto object-cover">
-                    </div>
-                    <!-- Portfolio Item 2 -->
-                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/400x600/E8B4C8/C13584?text=Outubro%0ARosa" alt="Arte da campanha Outubro Rosa" class="w-full h-auto object-cover">
-                    </div>
-                    <!-- Portfolio Item 3 -->
-                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/400x600/1E3A8A/FFFFFF?text=Novembro%0AAzul" alt="Arte da campanha Novembro Azul" class="w-full h-auto object-cover">
-                    </div>
-                    <!-- Portfolio Item 4 -->
-                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/400x600/222222/FF0000?text=Dia+Mundial%0Ado+Rock" alt="Arte para o Dia Mundial do Rock" class="w-full h-auto object-cover">
-                    </div>
-                     <!-- Portfolio Item 5 -->
-                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/400x600/F0A500/FFFFFF?text=Dia+das+Mães" alt="Arte para o Dia das Mães" class="w-full h-auto object-cover">
-                    </div>
-                     <!-- Portfolio Item 6 -->
-                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/400x600/ffffff/000000?text=Bienal%0Ado+Livro" alt="Arte para a Bienal do Livro" class="w-full h-auto object-cover">
-                    </div>
-                     <!-- Portfolio Item 7 -->
-                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/400x600/FFFFFF/E40303?text=Orgulho" alt="Arte da campanha de Orgulho" class="w-full h-auto object-cover">
-                    </div>
-                     <!-- Portfolio Item 8 -->
-                    <div class="portfolio-card bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/400x600/1a1a1a/ffffff?text=Lollapalooza" alt="Arte para o Lollapalooza" class="w-full h-auto object-cover">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato Section -->
-        <section id="contato" class="py-20 bg-white/40">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold section-title">Contato</h2>
-                <div class="mt-12 max-w-md mx-auto">
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col space-y-6">
-                        <a href="tel:21972865819" class="flex items-center justify-center space-x-4 text-lg hover:text-[#C68B59] transition-colors">
-                            <i class="fas fa-phone fa-fw"></i>
-                            <span>(21) 97286-5819</span>
-                        </a>
-                        <a href="mailto:catcabine@gmail.com" class="flex items-center justify-center space-x-4 text-lg hover:text-[#C68B59] transition-colors">
-                            <i class="fas fa-envelope fa-fw"></i>
-                            <span>catcabine@gmail.com</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-[#EADBC8] py-6">
-        <div class="container mx-auto px-6 text-center text-sm text-[#4A3F35]">
+    <!-- Rodapé -->
+    <footer class="bg-black">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
             <p>&copy; 2024 Maria Carolina. Todos os direitos reservados.</p>
-            <p class="mt-1">Desenvolvido com <i class="fas fa-heart text-red-500"></i></p>
+            <p class="text-sm mt-2">Design da página inspirado em Perspective.co e desenvolvido por assistente de IA.</p>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileLinks = document.querySelectorAll('#mobile-menu a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
 
 </body>
 </html>

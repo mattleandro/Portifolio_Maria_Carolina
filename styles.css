@@ -1,26 +1,24 @@
-/* Custom styles to match the PDF's aesthetic */
+/* Estilo para usar a fonte Inter */
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #FDF8F0; /* Soft beige background */
-    color: #4A3F35; /* Dark brown text color */
+    font-family: 'Inter', sans-serif;
+    background-color: #0A0A0A;
+    color: #E2E8F0;
 }
 
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
+/* Gradiente de fundo sutil para o corpo */
+.gradient-bg {
+    background-color: #0A0A0A;
+    background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%), radial-gradient(at 97% 21%, hsla(135, 98%, 61%, 0.1) 0px, transparent 50%), radial-gradient(at 52% 99%, hsla(355, 98%, 61%, 0.1) 0px, transparent 50%), radial-gradient(at 10% 29%, hsla(256, 96%, 66%, 0.15) 0px, transparent 50%), radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.1) 0px, transparent 50%), radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.15) 0px, transparent 50%), radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.1) 0px, transparent 50%);
 }
 
-.hero-section {
-    background-color: #EADBC8; /* Slightly darker beige for hero */
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.accent-color {
-    color: #C68B59; /* Muted gold/brown accent */
-}
-
-.section-title {
-    border-bottom: 2px solid #C68B59;
-    padding-bottom: 0.5rem;
-    display: inline-block;
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
 .portfolio-card {
@@ -28,6 +26,6 @@ h1, h2, h3 {
 }
 
 .portfolio-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
